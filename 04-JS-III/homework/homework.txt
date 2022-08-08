@@ -1,0 +1,21 @@
+Arrays: Al ya haber visto tantas cosas esto no se nos podría complicar tanto. Los Arrays son variables que contienen más de 1 solo dato dentro de ellos (No hablo de que contienen más de una palabra, sino que podrían contener más de 1 dato). Esto quiere decir que podremos guardar dentro de una variable tantos datos como quisieramos nosotros. Por ejemplo (El nombre de los estudiantes de una clase):
+
+    var nombreEstudiante = ["Max", "Nicolas", "Agustín", "Micaela"];
+
+Como podrás ver, el array se define con corchetes [] (En otras palabras, siempre que haya corchetes, será un array). Es importante saber que, los datos, dentro del array, tienen un número asignado, pero en vez de comenzar con el 1, comenzaremos con el 0 (Mirar el ejemplo a continuación). Pero, ahora que tengo mis datos, ¿cómo podemos acceder a ellos? Muy simple, para hacerlo utilizaremos un for de la siguiente manera.
+
+    for (let i = 0; i < nombreEstudiante.length; i++) {
+        console.log(nombreEstudiante[i]);
+    }
+    //"Max" 0
+    //"Nicolas" 1
+    //"Agustín" 2
+    //"Micaela" 3
+
+Como podrán ver por el ejemplo, utilizamos el método length. Pero, en este caso, no contó los caracteres de los datos (Como si la variable fuera un string), sino que contó la CANTIDAD de datos que existen dentro de un array.
+
+Pero qué pasa si necesitamos agregar o eliminar un dato a nuestro array. Bueno, existen 2 maneras/metodos de realizar esto:
+    - .push: Este es un caso para AGREGAR un dato a nuestro array. Pero, cabe recalcar, que, el dato que nosotros ingresemos, se agregará al final (Por ejemplo, nombreEstudiante.push("Agustina"); //Quedaría ["Max", "Nicolas", "Agustín", "Micaela", "Agustina"]).
+    - .pop: Este es un caso para ELIMINAR un dato de nuestro array. Pero, cabe recalcar, que, el dato que nosotros eliminemos, será el último dato de nuestro array (Por ejemplo, nombreEstudiante.pop(); //Quedaría ["Max", "Nicolas", "Agustín"]).
+    - .unshift: Este es un caso para AGREGAR un dato a nuestro array. Pero, cabe recalcar, que, el dato que nosotros ingresemos, se agregará al comienzo de nuestro array (Por ejemplo, nombreEstudiante.push("Agustina"); //Quedaría ["Agustina", "Max", "Nicolas", "Agustín", "Micaela"]).
+    - .shift: Este es un caso para ELIMINAR un dato de nuestro array. Pero, cabe recalcar, que, el dato que nosotros eliminemos, será el primer dato de nuestro array (Por ejemplo, nombreEstudiante.pop(); //Quedaría ["Nicolas", "Agustín", "Micaela").
