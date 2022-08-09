@@ -1,0 +1,31 @@
+Objetos: Anteriormente aprendimos sobre las matrices, un tipo de contenedor de datos. Ahora aprenderemos sobre objetos, otro tipo de contenedor de datos. Existen ciertas diferencias entre las matrices y los objetos, la más clara es que los objetos se instancian utilizando llaves (Por ejemplo, const nuevoObjeto = {};).
+    - Pares Clave:Valor (Key:Value): La clave-valor es la manera en que el objeto almacena datos. Los objetos pueden contener muchos pares de clave-valor, los cuales siempre deben de estar separados por una coma (Nunca punto y coma). Las claves (key) son los identificadores (Por ende, solo puede existir 1 clave con el mismo nombre) y el valor (value) es lo que queremos almacenar (Pueden existir varias claves con el mismo valor), estos pueden ser cualquier tipo de dato (cadena, booleano, número, matriz, objeto, función, etc.). Por ejemplo:
+        const user = {
+            username: “juan.perez”,
+            password: “loremipsumpwd123”,
+            lovesJavascript: true,
+            favoriteNumber: 42
+        };
+
+    - Acceder a los Valores: Una vez que tengamos nuestro objeto, podremos llamar a los valores utilizando el nombre del objeto y la clave. Esto podemos realizarlo de dos maneras diferentes. Una es utilizando puntos, como si habláramos de un método (Por ejemplo, user.username; //”juan.perez”). La otra es utilizando corchetes, que comúnmente se utilizan para matrices o variables, pero agregando comillas a la clave (Por ejemplo, user[‘lovesJavascript’] //true).
+    - Asignación de valores: Agregar valores es igual que al acceder a ellos. Podremos asignar cuando creamos el objeto, con punto y/o con corchetes (Por ejemplo, user.otroUsername = “juan.perez2”;  user[“otroPassword”] = ‘12345’).
+
+Propiedades: Si necesitamos eliminar una propiedad, podemos utilizar la palabra clave delete (Por ejemplo, delete user.username; //Se eliminó la clave y valor username). Hay muchos que creen que esta variable no es tan importante, que sería mejor establecer el valor en undefined. Esto depende de cada uno.
+
+Métodos: En los objetos, los valores se pueden establecer dentro de funciones. A esto se le llama método. Pudiendo establecer una clave para un nombre y un valor para una función. Igual que con los demás métodos, llamaremos a este utilizando puntos y paréntesis (Por ejemplo, const nuevoObjeto = { decirHola: function() { console.log(“hola mundo”)} }  nuevoObjeto.decirHola(); //Quedaría “hola mundo”).
+
+Bucles FOR...IN: A diferencia de las matrices que tienen un número índice, los objetos no lo tienen. Por ende, no podemos utilizar el bucle for para ver el interior de un objeto. Por otro lado, utilizaremos el bucle for…in, la cual, su sintaxis, es casi igual, pero entre paréntesis declaramos una variable, la palabra clave in y el nombre del objeto. Recorriendo cada clave del objeto y finalizando cuando se hayan iterado todas las claves. Por ejemplo:
+        for (let clave in usuario) {
+            console.log(clave);
+            console.log(usuario[clave]);
+        }
+        //username
+        //”juan.perez”
+        //password
+        //”loremipsumpwd123”
+        //lovesJavascript
+        //true
+        //favoriteNumber
+        //42
+
+Puntos vs corchetes:
