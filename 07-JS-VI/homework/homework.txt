@@ -1,0 +1,10 @@
+Callbacks: Este un importante concepto en JS. Con este, podremos pasar una función como argumento de otra función. Para realizarlos, necesitaremos utilizar la palabra cb de la siguiente manera.
+function granPelicula(pelicula) {
+    return "Mira que gran pelicula es " + pelicula + "!";
+}
+function laPelicula(pelicula, cb) {
+    return cb(pelicula);
+}
+
+>laPelicula("el secreto de sus ojos", granPelicula);
+<"Mira que gran pelicula es el secreto de sus ojos"
